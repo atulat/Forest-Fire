@@ -72,7 +72,7 @@ clf1 = SVC(kernel="linear",gamma=0.0001)
 clf1.fit(X_train , y_train)
 y_pred = clf1.predict(X_test)
 acc1 = accuracy_score(y_test, y_pred) * 100
-print("Linear Accuracy =", acc1)
+print("Accuracy for Linear Model =", acc1)
 confusion_matrix(y_test, y_pred)
 
 # Model2 with RBF
@@ -80,21 +80,21 @@ clf2 = SVC(C= 1, gamma = 0.001,kernel="rbf")
 clf2.fit(X_train , y_train)
 y_pred_train= clf2.predict(X_test)
 acc2 = accuracy_score(y_test, y_pred_train) * 100
-print("RBF Accuracy =", acc2)
+print("Accuracy for RBF Model =", acc2)
 
 # Model3 with Polynomial
 clf3 = SVC(C= 1, gamma = 0.001,kernel="poly")
 clf3.fit(X_train , y_train)
 y_pred_train= clf3.predict(X_test)
 acc3 = accuracy_score(y_test, y_pred_train) * 100
-print("Polynomial Accuracy =", acc3)
+print("Accuracy for Polynomial Model =", acc3)
 
 # Model 4 with sigmoid
 clf4 = SVC(kernel="sigmoid")
 clf4.fit(X_train , y_train)
 y_pred_test = clf4.predict(X_test)
 acc4 = accuracy_score(y_test, y_pred_test) * 100
-print("Sigmoid Accuracy =", acc4)
+print("Accuracy for Sigmoid Model =", acc4)
 
 # Out of all the Models, Model 1 with Linear has higher accuracy.
 
